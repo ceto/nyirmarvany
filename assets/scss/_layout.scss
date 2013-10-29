@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+html * {
+  box-sizing:border-box;
+}
+
+body {
+  position: relative;
+  background: $gray-bg;
+  @include breakpoint($s2){
+      padding:0 2em;
+  }
+
+}
+
+
+.container {
+  max-width: $maximum;
+  margin:0 auto;
+}
+
+.container[role="document"]{
+  //position:relative;
+}
+
+.main.col-sm-12 {
+  margin:0 1em;
+  @include breakpoint($s3){
+      margin:0 5em;
+  }
+
+  .page-template-template-home-php & {
+    
+    @include breakpoint($s2){
+      margin:0 0;
+    }
+  }
+
+  .page-template-template-no-sidebar-black-php & {
+    //background: $blue-menu;
+    //background: black;
+    //color:$white;
+   }
+}
+
+
+.main.col-sm-8 {
+  padding:0 1em ;
+  border-bottom:1px solid $blue-text;
+  
+  @include breakpoint($s2){
+    float:left;
+    width:66%;
+    border-right:1px solid $blue-text;
+    border-bottom:0;
+  }
+
+  @include breakpoint($s3){
+    padding:0 2em;
+  }
+}
+.sidebar.col-sm-4 {
+    padding:0 1em;
+  @include breakpoint($s2){
+
+    width:34%;
+    float:left;
+  }
+  @include breakpoint($s3){
+    padding:0 2em;
+  }
+}
+
+
+.felez {
+  p {
+   text-indent:0;
+   font-weight: 300;
+   color:$blue-text;
+   //text-align: left;
+   &:nth-of-type(1) {
+    //text-indent: 4em;
+   }
+  }
+
+  margin:3em 0;
+  @include breakpoint($s1){
+    width:50%;
+    float:left;
+    margin:1em 0;
+    padding:0 1em 0 0;
+    &:nth-of-type(2n){
+      clear:left;
+    }
+    &:nth-of-type(2n+1){
+      padding:0 0 0 1em;
+    }
+  }
+  @include breakpoint($s2){
+    padding:0 2em 0 0;
+    &:nth-of-type(2n+1){
+      padding:0 0 0 2em;
+    }
+
+  }
+
+  @include breakpoint($s3){
+    padding:0 4em 0 0;
+    &:nth-of-type(2n+1){
+      padding:0 0 0 4em;
+    }
+
+  }
+
+}
+
+

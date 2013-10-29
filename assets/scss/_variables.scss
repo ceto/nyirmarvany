@@ -1,0 +1,31 @@
+/*============= color definition =================*/
+
+$white:#fefefe;
+$black:#181818;
+
+$gray-bg:#e5e5e5;
+$black-text:#272727;
+
+$blue-menu:#46589f;
+$blue-linea:#3f4d85;
+$blue-text:#30459b;
+
+
+$blue-light:lighten($blue-menu,20%);
+
+/****************** breakpoints definition ***********/
+
+$s0:320px;
+$s1:480px;
+$s2:768px;
+$s3:1024px;
+
+$maximum:1140px;
+
+$experimental-support-for-svg: true;
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+.homebar{
+  margin:2em 0 0;
+  .widget{
+    color:$blue-text;
+    padding:0 0;
+    margin-bottom:2em; 
+
+    @include breakpoint($s2){
+      padding:0 4em;
+      width:50%;
+      float:left;
+
+      &:first-child {
+        border-right:1px solid $blue-linea;
+      }        
+    }
+    
+    h3 {
+      margin-top: 0;
+    }
+
+  }
+}
+
+.homeslide {
+
+
+  img {
+
+  }
+}
+
+.szalag {
+
+  
+  background: rgba($blue-text,0.5);
+ 
+  @include breakpoint($s2){
+    position: absolute;
+    left:0;
+    right:0;
+    margin-top:-13em;
+  }
+  
+
+
+
+
+  .csacsiwrap{
+    //padding:1em 1em;
+    max-width: $maximum;
+    margin:0 auto;
+  }
+  .bar {
+    font-size:2em;
+    font-weight: 300;
+    color:$white;
+    padding:0.5em 0.5em;
+    line-height: 1.5em;
+    @include breakpoint($s2){
+      padding:1em 2em;
+      width:50%;
+      float:left;
+
+    }
+
+  
+  }
+
+}

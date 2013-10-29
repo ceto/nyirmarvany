@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+
+.banner {
+  //border-top:8px solid $blue-linea;
+  padding:1em 0 1em;
+
+  @include breakpoint($s2){
+    
+  }
+
+  .adag {
+    padding:0 1em;
+    @include breakpoint($s2){
+      padding:0 0;
+    }
+  }
+
+  .brand {
+    float:left;
+    //text-align: center;
+    display: block;
+    img {
+      //margin-top:1em;
+      margin-bottom:0.25em;
+    }
+
+    
+  }
+
+  .description {
+    font-weight: 300;
+    color:$blue-menu;
+    font-size: 1.5em;
+    text-align: left;
+    margin:0 0;
+    clear:both;
+    @include breakpoint($s2){
+      clear:right;
+      text-align: right
+    }
+  }
+}
+
+
+
+#lang_sel_list{
+ 
+  margin-top:0.25em;
+
+
+  @include breakpoint($s1){
+      float:right;
+  }
+
+  ul {
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+  }
+  li {
+    float:left;
+  }
+  a {
+    padding:0 0.75em;
+    text-align: left;
+    font-size: 0.5em;
+    font-family: sans-serif;
+    text-align: left;
+    display: block;
+    color:$black;
+    transition: opacity 200ms ease-in;
+
+    &:hover, &:focus {
+      color: $blue-linea;
+      text-decoration: none;
+      opacity:0.7;
+    }
+    img {
+      display: block;
+      margin-bottom: 0.25em;
+
+    }
+  }
+
+}
