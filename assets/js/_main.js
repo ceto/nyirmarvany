@@ -41,4 +41,8 @@ $(document).ready(function() {
     interval: 3000
   });
 
+  // $('.content-info').css('top', function(index) {
+  //   return $('window').height();
+  // });
+
 });

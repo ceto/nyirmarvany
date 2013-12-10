@@ -279,7 +279,7 @@ function roots_gallery_great($attr) {
   $i = 0;
   foreach ($attachments as $id => $attachment) {
     $image = wp_get_attachment_image($id, $size, false ).'<h4>'.get_the_title($id).'</h4>';
-    $output .= ('none' == $link)?'<a href="#">':'<a href="'.wp_get_attachment_image_src( $id, $size, false ).'">';
+    $output .= ('none' == $link)?'<a>':'<a href="'.wp_get_attachment_image_src( $id, $size, false ).'">';
     $output .= $image;
     $output .= '</a>';
     $i++;

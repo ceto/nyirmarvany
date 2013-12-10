@@ -3,10 +3,21 @@
    ========================================================================== */
 
 .content-info {
-  border-top:8px solid $blue-linea;
-  margin-top:2em; 
+  border-top:1em solid $gray-bg;
+  margin-top:2em;
+  position: fixed;
+
+  @include breakpoint($s2){
+    left:0;right:0;
+    bottom:0;
+    background: $gray-bg;
+  }
+
+
+
 
   .row {
+    border-top:8px solid $blue-linea;
     @include breakpoint($s1){
       
       padding:1em 0;

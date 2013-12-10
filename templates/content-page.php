@@ -1,6 +1,6 @@
 <?php if (has_post_thumbnail() ) : ?>
 <figure class="entry-figure">
-  <?php the_post_thumbnail('large169');  ?>
+  <?php the_post_thumbnail('slidehome');  ?>
 </figure>
 <?php endif;?>
 <?php while (have_posts()) : the_post(); ?>

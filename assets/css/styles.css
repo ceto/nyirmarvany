@@ -1995,9 +1995,21 @@ body {
 /* ==========================================================================
    Header
    ========================================================================== */
+@media only screen and (min-width: 768px) {
+  .container[role="document"] {
+    margin-top: 157px;
+    margin-bottom: 80px; } }
+
 .banner {
   padding: 1em 0 1em; }
-  @media only screen and (min-width: 768px) { }
+  @media only screen and (min-width: 768px) {
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #e5e5e5;
+      z-index: 1; } }
   .banner .adag {
     padding: 0 1em; }
     @media only screen and (min-width: 768px) {
@@ -2052,17 +2064,26 @@ body {
    Footer
    ========================================================================== */
 .content-info {
-  border-top: 8px solid #3f4d85;
-  margin-top: 2em; }
-  @media only screen and (min-width: 480px) {
-    .content-info .row {
-      padding: 1em 0; } }
+  border-top: 1em solid #e5e5e5;
+  margin-top: 2em;
+  position: fixed; }
   @media only screen and (min-width: 768px) {
-    .content-info .row {
-      padding: 1em 0; } }
-  @media only screen and (min-width: 1024px) {
-    .content-info .row {
-      padding: 1em 4em; } }
+    .content-info {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #e5e5e5; } }
+  .content-info .row {
+    border-top: 8px solid #3f4d85; }
+    @media only screen and (min-width: 480px) {
+      .content-info .row {
+        padding: 1em 0; } }
+    @media only screen and (min-width: 768px) {
+      .content-info .row {
+        padding: 1em 0; } }
+    @media only screen and (min-width: 1024px) {
+      .content-info .row {
+        padding: 1em 4em; } }
 
 .nav-main {
   position: relative;

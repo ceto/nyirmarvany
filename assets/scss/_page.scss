@@ -1,24 +1,21 @@
-.page-id-17 {
-  .felez {
+.felez {
+  p > a {
+    display:block;
+    //width:75%;
+    //margin:0 auto;
+    padding:5px;
+    background:$white;
+    box-shadow:0 0 8px 0 darken($gray-bg,20%);
+    // @include transition-property(all);
+    // @include transition-duration(200ms);
+    // @include transition-timing-function(ease-in); 
     
-    p > a {
-      display:block;
-      //width:75%;
-      //margin:0 auto;
-      padding:5px;
-      background:$white;
-      box-shadow:0 0 8px 0 darken($gray-bg,20%);
-      // @include transition-property(all);
-      // @include transition-duration(200ms);
-      // @include transition-timing-function(ease-in); 
-      
-      &:hover,  &:focus {
-        background: $blue-linea;
-
-      }
-    }
-    img {
+    &:hover,  &:focus {
+      background: $blue-linea;
 
     }
+  }
+  img {
+
   }
 }

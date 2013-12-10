@@ -3,12 +3,24 @@
    ========================================================================== */
 
 
+.container[role="document"]{
+  @include breakpoint($s2){
+    margin-top:157px;
+    margin-bottom: 80px;
+  }
+}
+
 .banner {
   //border-top:8px solid $blue-linea;
   padding:1em 0 1em;
 
   @include breakpoint($s2){
-    
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: $gray-bg;
+    z-index: 1;
   }
 
   .adag {
