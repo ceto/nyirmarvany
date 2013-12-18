@@ -226,7 +226,7 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
-}
+ }
 
 .carousel-inner {
   position: relative;
@@ -236,12 +236,16 @@
   > .item {
     display: none;
     position: relative;
+    -webkit-transition:left .6s ease-in-out;
     transition:left .6s ease-in-out;
 
     // Account for jankitude on images
     > img,
     > a > img {
       //.img-responsive();
+      display: block;
+      max-width: 100%; // Part 1: Set a maximum relative to the parent
+      height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
       line-height: 1;
     }
   }
@@ -389,22 +393,27 @@
 // -----------------------------
 // Hidden by default for smaller viewports
 .carousel-caption {
+  background: rgba($blue-text,0.5);
   position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 1em;
   color: $white;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 0 5px $blue-menu ;
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
 }
 
-
+@include breakpoint ($s1) {
+  .carousel-caption {
+    right: 25%;
+  }
+}
 
 @include breakpoint ($s2) {
 
@@ -420,9 +429,7 @@
 
   // Show and left align the captions
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+    right: 50%;
   }
 
   // Move up the indicators
@@ -430,5 +437,12 @@
     bottom: 0px;
   }
 }
+
+@include breakpoint ($s3) {
+  .carousel-caption {
+    right: 66.6666%;
+  }
+}
+
 
 

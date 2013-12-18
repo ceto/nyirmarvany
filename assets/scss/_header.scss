@@ -2,7 +2,6 @@
    Header
    ========================================================================== */
 
-
 .container[role="document"]{
   @include breakpoint($s2){
     margin-top:157px;
@@ -20,7 +19,7 @@
     left:0;
     right:0;
     background: $gray-bg;
-    z-index: 1;
+    z-index: 11;
   }
 
   .adag {

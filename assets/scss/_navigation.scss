@@ -58,6 +58,52 @@
       height:auto;
       overflow: visible;
     }
+    
+    &.dropdown-menu {
+      padding:0 0 0 0;
+      margin-top: 0.4em;
+      background-color: $blue-menu;
+      transition: all .2s ease-in; 
+
+      @include breakpoint($s2){
+        position: absolute;
+        z-index: 11;
+        box-shadow: 0 0 1px 1px rgba($black,0.15);
+        display: none;
+      } 
+
+      li {
+        display: block;
+        padding:0 0;
+        a {
+          margin:0 0;
+          padding-left:1.5em;
+          box-shadow: none !important;
+          background-color: transparent !important;
+          @include breakpoint($s2){
+            padding-left:0.5em;
+          }
+          
+
+          &:hover, &:focus {
+            background-color: rgba($blue-text,0.5) !important;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .dropdown {
+    @include breakpoint($s2){
+       &:hover, &:focus {
+        .dropdown-menu {
+          display: block;
+        }
+
+       } 
+    } 
   }
 
   li {
@@ -76,18 +122,26 @@
     font-weight: 700;
     line-height: 3em;
     padding:0 0.5em;
-    margin-top:-0.4em;
-    margin-bottom: -0.4em;
+
     text-shadow:1px 1px 1px $black;
     transition: background 200ms ease-in;
- 
+    
+    @include breakpoint($s2){
+      margin-top:-0.4em;
+      margin-bottom: -0.4em;
+    }
     
     
     &:hover, &:focus {
       background: rgba($blue-text,0.5);
       color:white;
       text-decoration: none;
-      box-shadow: 0 0 1px 1px rgba($black,0.15); 
+      
+      
+      @include breakpoint($s2){
+        box-shadow: 0 0 1px 1px rgba($black,0.15);
+      }
+
     }
 
     &:focus {
@@ -102,7 +156,9 @@
       background: rgba($blue-text,0.5);
       color:white;
       text-decoration: none;
-      box-shadow: 0 0 1px 1px rgba($black,0.15); 
+      @include breakpoint($s2){
+        box-shadow: 0 0 1px 1px rgba($black,0.15);
+      }
     }
 
 

@@ -6,6 +6,7 @@
   border-top:1em solid $gray-bg;
   margin-top:2em;
   position: fixed;
+  z-index: 11;
 
   @include breakpoint($s2){
     left:0;right:0;

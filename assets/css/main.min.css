@@ -2575,6 +2575,44 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+  display: block;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+  transition: height .35s ease;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -2719,7 +2757,7 @@ body {
     left: 0;
     right: 0;
     background: #e5e5e5;
-    z-index: 1;
+    z-index: 11;
   }
 }
 
@@ -2810,6 +2848,7 @@ body {
   border-top: 1em solid #e5e5e5;
   margin-top: 2em;
   position: fixed;
+  z-index: 11;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2914,6 +2953,55 @@ body {
   }
 }
 
+.nav-main ul.dropdown-menu {
+  padding: 0 0 0 0;
+  margin-top: 0.4em;
+  background-color: #46589f;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main ul.dropdown-menu {
+    position: absolute;
+    z-index: 11;
+    -webkit-box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+    box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+    display: none;
+  }
+}
+
+.nav-main ul.dropdown-menu li {
+  display: block;
+  padding: 0 0;
+}
+
+.nav-main ul.dropdown-menu li a {
+  margin: 0 0;
+  padding-left: 1.5em;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main ul.dropdown-menu li a {
+    padding-left: 0.5em;
+  }
+}
+
+.nav-main ul.dropdown-menu li a:hover,
+.nav-main ul.dropdown-menu li a:focus {
+  background-color: rgba(48, 69, 155, 0.5) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main .dropdown:hover .dropdown-menu,
+  .nav-main .dropdown:focus .dropdown-menu {
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .nav-main li {
     display: inline-block;
@@ -2928,11 +3016,16 @@ body {
   font-weight: 700;
   line-height: 3em;
   padding: 0 0.5em;
-  margin-top: -0.4em;
-  margin-bottom: -0.4em;
   text-shadow: 1px 1px 1px #181818;
   -webkit-transition: background 200ms ease-in;
   transition: background 200ms ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main li a {
+    margin-top: -0.4em;
+    margin-bottom: -0.4em;
+  }
 }
 
 .nav-main li a:hover,
@@ -2940,8 +3033,14 @@ body {
   background: rgba(48, 69, 155, 0.5);
   color: white;
   text-decoration: none;
-  -webkit-box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
-  box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main li a:hover,
+  .nav-main li a:focus {
+    -webkit-box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+    box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+  }
 }
 
 .nav-main li a:focus {
@@ -2954,8 +3053,13 @@ body {
   background: rgba(48, 69, 155, 0.5);
   color: white;
   text-decoration: none;
-  -webkit-box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
-  box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-main li.active a {
+    -webkit-box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+    box-shadow: 0 0 1px 1px rgba(24, 24, 24, 0.15);
+  }
 }
 
 /* ==========================================================================
@@ -3327,6 +3431,9 @@ body {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
   line-height: 1;
 }
 
@@ -3455,20 +3562,27 @@ body {
 }
 
 .carousel-caption {
+  background: rgba(48, 69, 155, 0.5);
   position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 1em;
   color: #fefefe;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 0 5px #46589f;
 }
 
 .carousel-caption .btn {
   text-shadow: none;
+}
+
+@media only screen and (min-width: 480px) {
+  .carousel-caption {
+    right: 25%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -3482,13 +3596,17 @@ body {
   }
 
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+    right: 50%;
   }
 
   .carousel-indicators {
     bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .carousel-caption {
+    right: 66.6666%;
   }
 }
 
