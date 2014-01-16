@@ -30,7 +30,7 @@ body {
       margin:0 5em;
   }
 
-  .page-template-template-home-php & {
+  .page-template-template-home-php &,  .page-template-template-no-sidebar-php & {
     
     @include breakpoint($s2){
       margin:0 0;

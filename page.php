@@ -1,5 +1,9 @@
+<?php if (get_the_ID() != 17): ?>
+  
 <?php get_template_part('templates/page', 'header'); ?>
 <?php get_template_part('templates/content', 'page'); ?>
+
+<?php endif ?>
 
 <?php if ( ($post->post_parent == '17') || (get_the_ID() == 17) )  :?>
 <hr>

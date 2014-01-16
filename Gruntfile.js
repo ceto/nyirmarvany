@@ -8,20 +8,16 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        //'assets/js/*.js',
-        //'assets/js/plugins/*.js',
-        'assets/js/_plugins.js',
-        'assets/js/_main.js',
-        '!assets/js/main.min.js'
+        'assets/js/*.js',
+        '!assets/js/scripts.min.js'
       ]
     },
     uglify: {
       dist: {
         files: {
-          'assets/js/main.min.js': [
+          'assets/js/scripts.min.js': [
             'assets/js/plugins/*.js',
-            'assets/js/_plugins.js',
-            'assets/js/_main.js'
+            'assets/js/_*.js'
           ]
         }
       }
@@ -31,7 +27,7 @@ module.exports = function(grunt) {
         file: 'lib/scripts.php',
         css: 'assets/css/main.min.css',
         cssHandle: 'roots_main',
-        js: 'assets/js/main.min.js',
+        js: 'assets/js/scripts.min.js',
         jsHandle: 'roots_scripts'
       }
     },
@@ -39,21 +35,21 @@ module.exports = function(grunt) {
       dist: {
         options: {
          style: 'nested',
-         noCache: true,
+         /*noCache: true,*/
          sourcemap: true
         },
         files: {
-          'assets/css/main.min.css': [
-            'assets/scss/styles.scss'
-          ]
+          'assets/css/main.css': 'assets/scss/styles.scss'
         }
       }
     },
     autoprefixer: {
       dist: {
-        files: {
-          'assets/css/main.min.css': 'assets/css/main.min.css'
-        }
+        options: {
+            map: true
+        },
+        src: 'assets/css/main.css',
+        dest: 'assets/css/main.min.css'
       }
     },
     watch: {
@@ -61,7 +57,7 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/*.scss'
         ],
-        tasks: ['sass','autoprefixer', 'version']
+        tasks: ['sass', 'autoprefixer', 'version']
       },
       js: {
         files: [
@@ -70,15 +66,17 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'uglify', 'version']
       },
       livereload: {
+        // Browser live reloading
+        // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
           livereload: true
         },
         files: [
           'assets/css/main.min.css',
           'assets/js/scripts.min.js',
-          'lib/*.php',
           'templates/*.php',
-          './*.php'
+          '*.php',
+          '!lib/scripts.php'
         ]
       }
     },
@@ -104,9 +102,9 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean',
     'sass',
-    'autoprefixer',
     'uglify',
-    'version'
+    'version',
+    'autoprefixer'
   ]);
   grunt.registerTask('dev', [
     'watch'

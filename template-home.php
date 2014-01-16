@@ -4,7 +4,7 @@ Template Name: Home Page Template
 */
 ?>
 <div class="homeslide">
-  <div id="carousel-home" class="carousel slide">
+  <div id="carousel-home" data-interval="6000" class="carousel slide">
     <ol class="carousel-indicators">
       <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
       <li data-target="#carousel-home" data-slide-to="1" class=""></li>

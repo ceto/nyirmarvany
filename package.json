@@ -5,10 +5,10 @@
   "homepage": "http://hydrogene.hu",
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/roots.git"
+    "url": "git://github.com/ceto/nyirmarvany.git"
   },
   "bugs": {
-    "url" : "https://github.com/roots/roots/issues"
+    "url" : "https://github.com/ceto/nyirmarvany/issues"
   },
   "licenses": [{
     "type": "MIT",
@@ -18,13 +18,13 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-wp-version": "~0.1.0",
-    "grunt-contrib-sass": "0.5.0",
-    "grunt-autoprefixer": "~0.3.0"
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-autoprefixer": "~0.6.4"
   }
 }

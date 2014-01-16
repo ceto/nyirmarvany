@@ -8,6 +8,9 @@
   position: fixed;
   z-index: 11;
 
+
+  
+
   @include breakpoint($s2){
     left:0;right:0;
     bottom:0;
@@ -19,12 +22,13 @@
 
   .row {
     border-top:8px solid $blue-linea;
+    padding:1em 1em;
     @include breakpoint($s1){
       
-      padding:1em 0;
+      padding:1em 1em;
     }
     @include breakpoint($s2){
-      padding:1em 0;
+      padding:1em 1em;
     }
     @include breakpoint($s3){
       padding:1em 4em;
