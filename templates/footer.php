@@ -7,4 +7,4 @@
 </footer>
 
 <?php wp_footer(); ?>
-<script src="http://localhost:35729/livereload.js"></script>
+<script src="http://ceto.no-ip.org:35729/livereload.js"></script>

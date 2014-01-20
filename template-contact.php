@@ -160,7 +160,8 @@ function initialize() {
   var mapOptions = {
      zoom: 10,
      center: placem,
-     mapTypeId: google.maps.MapTypeId.ROADMAP
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     disableDefaultUI: true
   };
   var helyszin_map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
   helyszin_map.setOptions({styles: styles});
