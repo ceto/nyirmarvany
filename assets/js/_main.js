@@ -76,7 +76,7 @@ $(document).ready(function() {
     $('.nav-main ul').toggleClass('opened');
   });
 
-  $('#mycarousel').jcarousel({
+  $('.gallery').jcarousel({
     //scroll: 1,
     //initCallback: mycarousel_initCallback,
     // This tells jCarousel NOT to autobuild prev/next buttons

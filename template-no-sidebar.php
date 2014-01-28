@@ -23,7 +23,7 @@ Template Name: No Sidebar
           <p>
             Cégünket 1983-ban indítottuk kőfaragó tevékenységgel.
             A piaci igényeket figyelembe véve, folyamatos bővítések és fejlesztések eredményeként,
-            mára térség vezető gyártó és ellátó vállalkozása lettünk.
+            mára a térség vezető gyártó és ellátó vállalkozása lettünk.
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ Template Name: No Sidebar
         <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-06.jpg" alt="">
         <div class="carousel-caption">
           <p>
-            Több, mint 40 fős szakembergárdánk, valamint a legmodernebb technológiával felszerelt gépparkunk
+            Több mint 40 fős szakembergárdánk, valamint a legmodernebb technológiával felszerelt gépparkunk
             garantálja megrendelőink színvonalas, gyors kiszolgálását.
           </p>
         </div>
@@ -56,7 +56,7 @@ Template Name: No Sidebar
         <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-01.jpg" alt="">
         <div class="carousel-caption">
           <p>
-            Személyre szabott konstrukciókat kínálunk kis-, közép-, és nagyfelhasználók részére egyaránt.
+            Személyre szabott konstrukciókat kínálunk kis-, közép- és nagyfelhasználók részére egyaránt.
           </p>
         </div>
       </div>
@@ -92,6 +92,7 @@ Template Name: No Sidebar
       <span class="icon-next"></span>
     </a>
   </div>
+
 
   <?php //get_template_part('templates/page', 'header'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
