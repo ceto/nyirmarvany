@@ -20,10 +20,10 @@ Template Name: Kapcsolati oldal űrlappal
 
   //response messages
   $not_human       = "Person identifikasjon er feil.";
-  $missing_content = "Vennligst oppgi all informasjon";
-  $email_invalid   = "E-post er ikke korrekt.";
+  $missing_content = "Hiányzó mezők kitöltése kötelező";
+  $email_invalid   = "Érvénytelen e-mail cím.";
   $message_unsent  = "Melding er ikke sendt. Prøv igjen.";
-  $message_sent    = "Takk! Din melding er sendt.";
+  $message_sent    = "Üzenetét elküldtük.";
 
 
   //user posted variables
@@ -33,7 +33,7 @@ Template Name: Kapcsolati oldal űrlappal
   $message = $_POST['message_text'];
   $human = $_POST['message_human'];
   $subjecto = $_REQUEST['ap_id'];
-  $lakas = 'Leilighet '.get_the_title($subjecto);
+  $lakas = get_the_title($subjecto);
 
   //php mailer variables
   //$to = get_option('admin_email');
@@ -42,7 +42,7 @@ Template Name: Kapcsolati oldal űrlappal
   
   $headers = "From: " . strip_tags($email) . "\r\n";
   $headers .= "Reply-To: ". strip_tags($email) . "\r\n";
-  $headers .= "CC: szabogabor@hydrogene.hu\r\n";
+  $headers .= "CC: info@nyirmarvany.hu\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   //$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
