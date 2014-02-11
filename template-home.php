@@ -18,28 +18,28 @@ Template Name: Home Page Template
 
     <div class="carousel-inner">
       <div class="item active">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-01.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-01.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-02.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-02.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-03.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-03.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-04.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-04.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-05.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-05.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-06.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-06.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-07.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-07.jpg" alt="">
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-09.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-09.jpg" alt="">
       </div>
       
     </div>
@@ -56,10 +56,10 @@ Template Name: Home Page Template
   <div class="szalag clearfix">
     <div class="csacsiwrap clearfix">
       <div class="bar leftbar">
-        <strong>30 éve</strong> élen a kőszakmában
+        <?php _e('<strong>30 éve</strong> élen a kőszakmában','root'); ?>
       </div>
       <div class="bar rightbar">
-        <strong>Nagykereskedelmi</strong> értékesítés
+        <?php _e('<strong>Nagykereskedelmi</strong> értékesítés','root'); ?>
       </div>
     </div>    
   </div>

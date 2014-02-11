@@ -17,7 +17,7 @@ Template Name: No Sidebar
 
     <div class="carousel-inner">
       <div class="item active">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-05.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-05.jpg" alt="">
         <div class="carousel-caption">
           <h3>Rólunk</h3>
           <p>
@@ -28,7 +28,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-06.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-06.jpg" alt="">
         <div class="carousel-caption">
           <p>
             Több mint 40 fős szakembergárdánk, valamint a legmodernebb technológiával felszerelt gépparkunk
@@ -37,7 +37,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-07.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-07.jpg" alt="">
         <div class="carousel-caption">
           <p>
             Állandóan bővülő árukészletünkben megtalálhatók a világ minden tájáról származó természetes kövek.
@@ -45,7 +45,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-09.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-09.jpg" alt="">
         <div class="carousel-caption">
           <p>
             Logisztikai bázisunk és saját gépjárműparkunk lehetővé teszi a gyors házhozszállítást az ország egész területén.
@@ -53,7 +53,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-01.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-01.jpg" alt="">
         <div class="carousel-caption">
           <p>
             Személyre szabott konstrukciókat kínálunk kis-, közép- és nagyfelhasználók részére egyaránt.
@@ -61,7 +61,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-02.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-02.jpg" alt="">
         <div class="carousel-caption">
           <p>
             Új szolgáltatásként direkt import lebonyolításával is állunk ügyfeleink részére.
@@ -69,7 +69,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-03.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-03.jpg" alt="">
         <div class="carousel-caption">
           <h3>
             Remélem hamarosan Önt is elégedett partnereink között üdvözölhetjük.
@@ -78,7 +78,7 @@ Template Name: No Sidebar
         </div>
       </div>
       <!-- div class="item">
-        <img src="<?php echo get_home_url().'/wp-content/uploads/2013/10/'; ?>slide-marvany-04.jpg" alt="">
+        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-04.jpg" alt="">
       </div -->
       
       
