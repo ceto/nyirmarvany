@@ -106,7 +106,7 @@ if(!$human == 0){
                 'posts_per_page'=>100,
                 'orderby'=>'date',
                 'order'=>'ASC',
-                'post_parent__in'=>array(17)
+                'post_parent__in'=>array(icl_object_id(17, 'page', true))
                )
               );
           ?>    
@@ -129,7 +129,7 @@ if(!$human == 0){
           <div class="aform-actions">
             <input type="hidden" name="message_human" value="2">
             <input type="hidden" name="submitted" value="1">
-            <input type="submit" class="submitbtn btn" value="<?php _e('Elküldöm','roots'); ?>">
+            <input type="submit" class="submitbtn btn" value="<?php _e('Elküld','roots'); ?>">
           </div>
         </form>
 

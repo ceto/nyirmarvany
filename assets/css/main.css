@@ -3135,11 +3135,6 @@ a {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
-.main p {
-  text-align: justify; }
-  .page-id-9 .main p {
-    text-indent: 4em; }
-
 hr {
   clear: both;
   margin: 2em auto 0;
