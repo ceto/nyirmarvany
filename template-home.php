@@ -55,12 +55,7 @@ Template Name: Home Page Template
 
   <div class="szalag clearfix">
     <div class="csacsiwrap clearfix">
-      <div class="bar leftbar">
-        <?php _e('<strong>30 éve</strong> élen a kőszakmában','root'); ?>
-      </div>
-      <div class="bar rightbar">
-        <?php _e('<strong>Nagykereskedelmi</strong> értékesítés','root'); ?>
-      </div>
+      <?php dynamic_sidebar('sidebar-primary'); ?>
     </div>    
   </div>
 </div>

@@ -3570,14 +3570,14 @@ body {
   .szalag .csacsiwrap {
     max-width: 1140px;
     margin: 0 auto; }
-  .szalag .bar {
+  .szalag .bar, .szalag .widget {
     font-size: 2em;
     font-weight: 300;
     color: #fefefe;
     padding: 0.5em 0.5em;
     line-height: 1.5em; }
     @media only screen and (min-width: 768px) {
-      .szalag .bar {
+      .szalag .bar, .szalag .widget {
         padding: 1em 2em;
         width: 50%;
         float: left; } }
