@@ -12,7 +12,6 @@ Template Name: No Sidebar
       <li data-target="#carousel-home" data-slide-to="4"></li>
       <li data-target="#carousel-home" data-slide-to="5"></li>
       <li data-target="#carousel-home" data-slide-to="6"></li>
-      <!-- li data-target="#carousel-home" data-slide-to="7"></li -->
     </ol>
 
     <div class="carousel-inner">
@@ -77,13 +76,7 @@ Template Name: No Sidebar
           <p style="text-indent:0">Petró Attila - <em>tulajdonos</em></p>
         </div>
       </div>
-      <!-- div class="item">
-        <img src="http://nyirmarvany.hu/wp-content/uploads/2013/10/slide-marvany-04.jpg" alt="">
-      </div -->
-      
-      
     </div>
-
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-home" data-slide="prev">
       <span class="icon-prev"></span>

@@ -3,6 +3,68 @@
 Template Name: Kapcsolati oldal űrlappal
 */
 ?>
+
+<?php 
+  $la=ICL_LANGUAGE_CODE;
+
+  $icl_elkuld=array(
+    'hu'=>'Elküld',
+    'en'=>'Send',
+    'sk'=>'ODOSLAŤ',
+    'ua'=>'ВІДПРАВИТИ',
+    'ro'=>'ÎL TRIMIT'
+  );
+
+  $icl_kerdese=array(
+    'hu'=>'Kérdése van? <small>Érdeklődjön űrlapunkon</small>',
+    'en'=>'For enquiry please fill in this format below. <small>We will answer you soon.</small>',
+    'sk'=>'MÁTE OTÁZKU? <small>POUŽITE KONTAKTNÝ FORMULÁR</small>',
+    'ua'=>'В РАЗІ ПИТАНЬ ЗВЕРТАЙТЕСЬ ДО НАС ЧЕРЕЗ ДОСТУПНИЙ ФОРМУЛЯР<small> </small>',
+    'ro'=>'AVETI ÎNTREBĂRI? <small> TRANSMITEŢI-LE PRIN FORMULARUL NOSTRU</small>'
+  );
+
+  $icl_altalanos=array(
+    'hu'=>'Általános érdeklődés',
+    'en'=>'Enquiry',
+    'sk'=>'Všeobecný dopyt',
+    'ua'=>'Звернення загального типу',
+    'ro'=>'Informaţii generale'
+  );
+
+  $icl_targy=array(
+    'hu'=>'Tárgy',
+    'en'=>'Subject',
+    'sk'=>'Predmet',
+    'ua'=>'тема',
+    'ro'=>'subiect'
+  );
+  $icl_name=array(
+    'hu'=>'Név',
+    'en'=>'Name',
+    'sk'=>'Meno',
+    'ua'=>'Прізвище та ім’я',
+    'ro'=>'Nume'
+  );
+
+  $icl_uzenet=array(
+    'hu'=>'Üzenet',
+    'en'=>'Message',
+    'sk'=>'Text správy',
+    'ua'=>'Текст Вашого звернення',
+    'ro'=>'Textul mesajului'
+  );
+  $icl_tel=array(
+    'hu'=>'Tel.',
+    'en'=>'Phone',
+    'sk'=>'Tel.',
+    'ua'=>'Телефон',
+    'ro'=>'Tel.'
+  );
+
+  
+?>
+
+
 <?php
   //response generation function
 
@@ -81,12 +143,12 @@ if(!$human == 0){
         <?php the_content(); ?>
       <hr />
       <div id="respond">
-        <h3>Kérdése van? <small>Érdeklődjön űrlapunkon</small></h3>
+        <h3><?php echo $icl_kerdese[$la]; ?></h3>
         <?php echo $response; ?>
         <form class="form-horizontal clearfix" action="<?php the_permalink(); ?>" method="post">
           <div class="controlsa clearfix">
-              <label for="message_name">Név</label>
-              <input type="text" required placeholder="Név" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>">
+              <label for="message_name"><?php echo $icl_name[$la] ?></label>
+              <input type="text" required placeholder="<?php echo $icl_name[$la] ?>" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>">
           </div>
           <div class="controlsa clearfix">
             <label for="message_email">E-mail</label>
@@ -94,8 +156,8 @@ if(!$human == 0){
           </div>
 
           <div class="controlsa clearfix">
-              <label for="message_tel">Tel.</label>
-              <input type="text" required placeholder="Tel." id="message_tel" name="message_tel" value="<?php echo $_POST['message_tel']; ?>">
+              <label for="message_tel"><?php echo $icl_tel[$la] ?></label>
+              <input type="text" required placeholder="<?php echo $icl_tel[$la] ?>" id="message_tel" name="message_tel" value="<?php echo $_POST['message_tel']; ?>">
           </div>
 
 
@@ -112,9 +174,9 @@ if(!$human == 0){
           ?>    
           
           <div class="controlsa clearfix">
-            <label for="ap_id">Tárgy</label>
+            <label for="ap_id"><?php echo $icl_targy[$la] ?></label>
             <select name="ap_id" id="ap_id">
-              <option <?php if($ubjecto == 'Általános érdeklődés') echo 'selected'; ?> value="Általános érdeklődés">Általános érdeklődés</option>
+              <option <?php if($ubjecto == $icl_altalanos[$la]) echo 'selected'; ?> value="<?php echo $icl_altalanos[$la] ?>"><?php echo $icl_altalanos[$la] ?></option>
                 <?php while ( $the_ap->have_posts()) : $the_ap->the_post(); ?>
                 <option <?php if($subjecto == get_the_ID()) echo 'selected'; ?> value="<?php the_ID(); ?>"><?php the_title(); ?></option>
                 <?php endwhile; ?>
@@ -122,14 +184,14 @@ if(!$human == 0){
           </div>
 
           <div class="controlsa clearfix">
-              <label for="message_text">Üzenet</label>
-              <textarea required placeholder="Üzenet szövege ..." rows="6" id="message_text" name="message_text" value="<?php echo $_POST['message_text']; ?>"></textarea>
+              <label for="message_text"><?php echo $icl_uzenet[$la] ?></label>
+              <textarea required placeholder="<?php echo $icl_uzenet[$la] ?>" rows="6" id="message_text" name="message_text" value="<?php echo $_POST['message_text']; ?>"></textarea>
           </div>
 
           <div class="aform-actions">
             <input type="hidden" name="message_human" value="2">
             <input type="hidden" name="submitted" value="1">
-            <input type="submit" class="submitbtn btn" value="<?php _e('Elküld','roots'); ?>">
+            <input type="submit" class="submitbtn btn" value="<?php echo $icl_elkuld[$la] ?>">
           </div>
         </form>
 
