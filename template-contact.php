@@ -10,54 +10,54 @@ Template Name: Kapcsolati oldal űrlappal
   $icl_elkuld=array(
     'hu'=>'Elküld',
     'en'=>'Send',
-    'sk'=>'ODOSLAŤ',
-    'ua'=>'ВІДПРАВИТИ',
+    'de'=>'ODOSLAŤ',
+    'uk'=>'ВІДПРАВИТИ',
     'ro'=>'ÎL TRIMIT'
   );
 
   $icl_kerdese=array(
     'hu'=>'Kérdése van? <small>Érdeklődjön űrlapunkon</small>',
     'en'=>'For enquiry please fill in this format below. <small>We will answer you soon.</small>',
-    'sk'=>'MÁTE OTÁZKU? <small>POUŽITE KONTAKTNÝ FORMULÁR</small>',
-    'ua'=>'В РАЗІ ПИТАНЬ ЗВЕРТАЙТЕСЬ ДО НАС ЧЕРЕЗ ДОСТУПНИЙ ФОРМУЛЯР<small> </small>',
+    'de'=>'MÁTE OTÁZKU? <small>POUŽITE KONTAKTNÝ FORMULÁR</small>',
+    'uk'=>'В РАЗІ ПИТАНЬ ЗВЕРТАЙТЕСЬ ДО НАС ЧЕРЕЗ ДОСТУПНИЙ ФОРМУЛЯР<small> </small>',
     'ro'=>'AVETI ÎNTREBĂRI? <small> TRANSMITEŢI-LE PRIN FORMULARUL NOSTRU</small>'
   );
 
   $icl_altalanos=array(
     'hu'=>'Általános érdeklődés',
     'en'=>'Enquiry',
-    'sk'=>'Všeobecný dopyt',
-    'ua'=>'Звернення загального типу',
+    'de'=>'Všeobecný dopyt',
+    'uk'=>'Звернення загального типу',
     'ro'=>'Informaţii generale'
   );
 
   $icl_targy=array(
     'hu'=>'Tárgy',
     'en'=>'Subject',
-    'sk'=>'Predmet',
-    'ua'=>'тема',
+    'de'=>'Predmet',
+    'uk'=>'тема',
     'ro'=>'subiect'
   );
   $icl_name=array(
     'hu'=>'Név',
     'en'=>'Name',
-    'sk'=>'Meno',
-    'ua'=>'Прізвище та ім’я',
+    'de'=>'Meno',
+    'uk'=>'Прізвище та ім’я',
     'ro'=>'Nume'
   );
 
   $icl_uzenet=array(
     'hu'=>'Üzenet',
     'en'=>'Message',
-    'sk'=>'Text správy',
-    'ua'=>'Текст Вашого звернення',
+    'de'=>'Text správy',
+    'uk'=>'Текст Вашого звернення',
     'ro'=>'Textul mesajului'
   );
   $icl_tel=array(
     'hu'=>'Tel.',
     'en'=>'Phone',
-    'sk'=>'Tel.',
-    'ua'=>'Телефон',
+    'de'=>'Tel.',
+    'uk'=>'Телефон',
     'ro'=>'Tel.'
   );
 
@@ -81,11 +81,55 @@ Template Name: Kapcsolati oldal űrlappal
   }
 
   //response messages
+
   $not_human       = "Person identifikasjon er feil.";
   $missing_content = "Hiányzó mezők kitöltése kötelező";
   $email_invalid   = "Érvénytelen e-mail cím.";
   $message_unsent  = "Melding er ikke sendt. Prøv igjen.";
   $message_sent    = "Üzenetét elküldtük.";
+
+  switch ($la) {
+    case 'hu':
+      $not_human       = "Azonosítás sikertelen";
+      $missing_content = "Hiányzó mezők kitöltése kötelező";
+      $email_invalid   = "Érvénytelen e-mail cím.";
+      $message_unsent  = "Az üzenetet nem sikerült elkűldeni";
+      $message_sent    = "Üzenetét elküldtük.";
+    break;
+    
+    case 'en':
+      $not_human       = "Authentication failed";
+      $missing_content = "Missing fields are required";
+      $email_invalid   = "Invalid e-mail address";
+      $message_unsent  = "Error message";
+      $message_sent    = "Your message has been sent";
+    break;
+    
+    case 'de':
+      $not_human       = "Neúspešná identifikácia";
+      $missing_content = "Vyplnenie chýbajúcich polí je povinné";
+      $email_invalid   = "Neplatná e-mailová adresa";
+      $message_unsent  = "Odoslanie správy bolo neúspešné";
+      $message_sent    = "Správa bola úspešne odoslaná";
+    break;
+    
+    case 'uk':
+      $not_human       = "Помилкова автентифікація";
+      $missing_content = "Пусті поля заповнити обов’язково";
+      $email_invalid   = "Неправильна адреса електронної пошти";
+      $message_unsent  = "Повідомлення відправити не вдалося";
+      $message_sent    = "Повідомлення відправлено";
+    break;
+
+    case 'ro':
+      $not_human       = "Autentificarea a eșuat";
+      $missing_content = "Completarea spaţiilor lipsă este obligatorie";
+      $email_invalid   = "Adresa email invalidă";
+      $message_unsent  = "Trimitere mesaj nereuşită";
+      $message_sent    = "Mesajul Dvs a fost trimis";
+    break;
+  }
+  
 
 
   //user posted variables
@@ -126,7 +170,9 @@ if(!$human == 0){
         {
           $message='Name: '.$name.'<br/>'.'Tel: '.$tel.'<br />'.'Subject: '.$lakas.'<br />'.$message;
           $sent = wp_mail($to, $subject, $message, $headers);
-            if($sent) generate_response("success", $message_sent); //message sent!
+            if($sent) {
+              generate_response("success", $message_sent); //message sent!
+            }
             else generate_response("error", $message_unsent); //message wasn't sent
         }
       }

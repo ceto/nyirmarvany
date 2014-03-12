@@ -3844,6 +3844,7 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
+  z-index: 11;
   opacity: 0.5;
   font-size: 2em;
   color: black;
